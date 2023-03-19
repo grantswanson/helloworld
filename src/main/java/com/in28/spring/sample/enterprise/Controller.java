@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -28,8 +27,8 @@ public class Controller {
 }
 
 @Service
-class BusinessService{
-    private DataService dataService;
+class BusinessService {
+    private final DataService dataService;
 
     public BusinessService(DataService dataService) {
         this.dataService = dataService;
@@ -43,6 +42,6 @@ class BusinessService{
 @Repository
 class DataService {
     public List<Integer> retrieveData() {
-        return List.of(1,2,3,4,5,6,7,8,9);
+        return List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
     }
 }
