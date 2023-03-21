@@ -30,6 +30,7 @@ jobs:
 
       - name: Maven Clean and Install
         run: mvn -B clean install
+
       - uses: mr-smithers-excellent/docker-build-push@v6
         name: Build & push Docker image to dockerhub (aka docker.io)
         with:
